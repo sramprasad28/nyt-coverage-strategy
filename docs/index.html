@@ -7,29 +7,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/styles.css?v=28">
+  <link rel="stylesheet" href="static/styles.css?v=32">
 </head>
 <body>
   <header class="mast">
     <p class="kicker">2027 coverage strategy</p>
     <h1>What's popular with NYT readers</h1>
     <p class="lede">Which New York Times topics, regions, and formats are popular with NYT audiences and what this means for where to put reporting coverage in 2027.</p>
-    <p id="status-line" class="status-line">Loading the latest pull.</p>
   </header>
   <main>
     <section id="recommendation" class="panel recommendation">
       <p class="section-kicker">Recommendation</p>
       <h2>Where to focus in 2027</h2>
+      <p id="status-line" class="status-line">Loading the latest pull.</p>
       <div id="recommendation-body"></div>
     </section>
     <aside class="limitation" aria-label="Data limitation">
       <p class="limitation-kicker">Limitation</p>
-      <p>The NYT archive base covers January 2026 through October 4, 2026. The Most Popular list covers October 1–31, 2026. The two windows do not match, so archive share versus Most Popular share is a crude comparison of coverage and popularity, not a clean like-for-like read.</p>
+      <p>The NYT archive base covers January 2026 through October 4, 2026. The Most Popular list covers October 1–31, 2026. The two windows do not match, so archive share versus Most Popular share is a crude comparison of coverage and popularity.</p>
     </aside>
     <section id="site" class="panel">
       <p class="section-kicker">Section 1 · Topic performance</p>
       <h2>How different topics perform on NYTimes.com</h2>
-      <p class="section-lede">Each topic is one dot. Across is its share of the 2026 archive, up is its share of the Most Popular articles, and the dashed line marks equal share. Dots above the line draw more readers than their coverage. The list ranks the same topics by that ratio. Click the buttons to switch emailed, viewed, or shared.</p>
+      <p class="section-lede">Each topic is a dot on the plot, and those above the dashed line are popular relative to the Times' coverage of that topic and may present areas of investment opportunity.</p>
       <div id="site-body"></div>
     </section>
     <section id="divest" class="panel">
@@ -60,6 +60,6 @@
       if (line) line.textContent = String(message);
     };
   </script>
-  <script src="static/app.js?v=32"></script>
+  <script src="static/app.js?v=36"></script>
 </body>
 </html>

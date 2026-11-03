@@ -772,20 +772,12 @@ function investmentBlock(board) {
   });
   wrap.append(switcher);
   wrap.append(topicCompare(investment, investMode));
-  const popularityDefinition = {
-    aggregate: "the share of Most Popular articles with this topic. A story on more than one list counts once.",
-    emailed: "the share of emailed articles with this topic. A story on the 1-day and 30-day lists counts once.",
-    viewed: "the share of viewed articles with this topic. A story on the 1-day and 30-day lists counts once.",
-    shared: "the share of shared articles with this topic. A story on the 1-day and 30-day lists counts once.",
-    shared_facebook: "the share of Facebook-shared articles with this topic. A story on the 1-day and 30-day lists counts once.",
-  }[investMode];
   const legend = el("div", "legend");
   legend.append(
-    legendItem("ahead", "Filled dot", "popularity is ahead of coverage, above the dashed line."),
+    legendItem("ahead", "Red dot", "popularity is ahead of coverage, above the dashed line."),
     legendItem("behind", "Hollow dot", "popularity trails coverage, below the line."),
   );
   wrap.append(legend);
-  wrap.append(el("p", "note", `Across: the share of 2026 archive articles with this topic. Up: ${popularityDefinition}`));
   if (board.facebook_matches_shared && (investMode === "shared" || investMode === "shared_facebook")) {
     wrap.append(el("p", "note", "On this pull, the Facebook list is the same articles as the shared list, so those two charts match."));
   }
